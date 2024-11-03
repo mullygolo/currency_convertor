@@ -21,7 +21,7 @@ st.title("ממיר מטבעות")
 amount = st.number_input("הזן סכום בלירה טורקית:", min_value=0.0, step=0.01, format="%g", value=None)
 
 # Conversion logic
-if st.button("בצע המרה"):
+if st.button("המר"):
     try_to_ils_rate = get_try_to_ils_rate()
-    converted_amount = amount * try_to_ils_rate
+    converted_amount = amount / try_to_ils_rate
     st.write(f"{converted_amount:.2f} ש\"ח")
